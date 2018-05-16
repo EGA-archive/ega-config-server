@@ -1,8 +1,8 @@
 #!/bin/bash
 SERVICE_NAME=ConfigService
-PATH_TO_JAR=/ConfigServer-0.0.1-SNAPSHOT.jar
-PROCESSCNT=$(ps x | grep -v grep | grep -c "ConfigServer-0.0.1-SNAPSHOT.jar")
-PID=$(ps aux | grep "ConfigServer-0.0.1-SNAPSHOT.jar" | grep -v grep | awk '{print $2}')
+PATH_TO_JAR=/config-server-0.0.1-SNAPSHOT.jar
+PROCESSCNT=$(ps x | grep -v grep | grep -c "config-server-0.0.1-SNAPSHOT.jar")
+PID=$(ps aux | grep "config-server-0.0.1-SNAPSHOT.jar" | grep -v grep | awk '{print $2}')
 case $1 in
     start)
 	if [ $PROCESSCNT == 0 ]; then
@@ -24,4 +24,3 @@ case $1 in
         fi
     ;;
 esac
-
